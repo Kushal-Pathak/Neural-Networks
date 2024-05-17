@@ -20,14 +20,13 @@ class Perceptron {
 
   //learn on single data
   learn(x1, x2, target) {
-    let result = this.linear_combiner(x1, x2);
-    result = this.activation_function(result);
+    let result = this.predict(x1, x2);
     let error = target - result;
     this.w1 += this.lr * error * x1;
     this.w2 += this.lr * error * x2;
     this.bias += this.lr * error;
-    stroke(0)
-    strokeWeight(2)
+    stroke(0);
+    strokeWeight(2);
     if (error == 0) fill(0, 255, 0);
     else fill(255, 0, 0);
     circle(x1, x2, 15);
