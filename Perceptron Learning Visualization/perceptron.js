@@ -1,6 +1,6 @@
 class Perceptron {
   constructor() {
-    this.lr = 0.01; //learning rate
+    this.lr = 0.1; //learning rate
     this.bias = 1; //bias value
     this.w1 = random(-1, 1); //first weight
     this.w2 = random(-1, 1); //second weight

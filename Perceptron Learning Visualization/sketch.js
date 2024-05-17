@@ -10,6 +10,16 @@ function setup() {
   strokeWeight(1.5);
   line(50, 50, width - 50, height - 50);
   p = new Perceptron();
+  let i = 0;
+  while (i < 10) {
+    let x = random(50, width - 50);
+    let y = random(50, height - 50);
+    if (abs(x - y) <= 10) {
+      i++;
+      let z = x > y ? 1 : -1;
+      data.push(createVector(x, y, z));
+    }
+  }
   for (let i = 0; i < 100; i++) {
     let x = random(50, width - 50);
     let y = random(50, height - 50);
